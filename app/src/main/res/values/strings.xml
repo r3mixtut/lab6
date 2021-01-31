@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Справочник Читателя</string>
+    <string name="hello_text"></string>
+    <string name="btn_send">отправить список</string>
+    <string name="btn_text">показать книги</string>
+    <string-array name="author">
+        <item>Стивен Кинг</item>
+        <item>Джоан Роулинг</item>
+        <item>Генри Форд</item>
+    </string-array>
+    <string name="books">автор:</string>
+    <string name="genre">Жанр в якому він пише:</string>
+    <string name="btn_ok_text">ok</string>
+    <string name="btn2_text">детальніше</string>
+
+    <string name="countryOfIssue">страна выпуска книги :</string>
+    <string name="countryOfIssue_Usa">США</string>
+    <string name="countryOfIssue_UnitedKingdom">Великобритания</string>
+
+    <string name="criticallyTestedFlg">Проверено критиком</string>
+    <string name="onSaleFlg">В продаже</string>
+
+</resources>

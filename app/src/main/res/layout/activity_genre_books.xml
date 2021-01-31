@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".genreBooksActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/image" />
+
+        <TextView
+            android:id="@+id/authorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="Автор"
+            android:textColor="#FF0000"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/genreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:text="жанр"
+            android:textColor="#FF0000"
+            android:textSize="18dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/books"
+            android:textSize="@dimen/default_text_size" />
+
+        <EditText
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/genre"
+        android:textSize="@dimen/default_text_size"
+        android:layout_marginTop="@dimen/default_padding" />
+
+    <EditText
+        android:id="@+id/genre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" >
+        <TextView android:text="@string/countryOfIssue"/>
+
+        <RadioGroup>
+            <RadioButton
+                android:id="@+id/radio_countryOfIssue_Usa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/countryOfIssue_Usa" />
+
+            <RadioButton
+                android:id="@+id/radio_UnitedKingdom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/countryOfIssue_UnitedKingdom"/>
+        </RadioGroup>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:text="дополнительные сведения:"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                android:id="@+id/CBcriticallyTestedFlg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/criticallyTestedFlg"/>
+                <CheckBox
+                    android:id="@+id/CBonSaleFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onSaleFlg"/>
+            </LinearLayout>
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:gravity="center"
+        android:layout_gravity="top|end"
+        android:text="@string/btn_ok_text"
+        android:textSize="@dimen/default_text_size"
+        android:onClick="onBtnOkClick"/>
+</LinearLayout>
